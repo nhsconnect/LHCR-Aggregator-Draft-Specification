@@ -1,2 +1,2 @@
-# LHCR-Aggregator-Draft-Specification
-LHCR Aggregator Draft Specification
+# record-locator-specification
+record-locator-specification
