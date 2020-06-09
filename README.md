@@ -1,2 +1,1 @@
-# record-locator-specification
-record-locator-specification
+# nhsconnect-documentation-theme
