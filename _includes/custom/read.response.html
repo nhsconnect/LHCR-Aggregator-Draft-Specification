@@ -1,0 +1,32 @@
+<p>Return a single <code class="highlighter-rouge">{{include.resource}}</code> for the specified id{{include.content}}.</p>
+
+<p>All requests MUST contain a valid <code class="highlighter-rouge">Authorization</code> header and MUST contain an <code class="highlighter-rouge">Accept</code> header. The <code class="highlighter-rouge">Accept</code> header indicates the format of the response the client is able to understand, this will be one of the following <code class="highlighter-rouge">application/fhir+json</code> or <code class="highlighter-rouge">application/fhir+xml</code>.</p>
+
+<h3 id="readresponse">1.1. Response</h3>
+
+<p>A full set of response codes can be found here <a href="profiles_api_codes.html">API Response Codes</a>. FHIR Servers MUST support the following response codes:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>200</td>
+      <td>successful operation</td>
+       <td></td>
+    </tr>
+     <tr>
+      <td>403</td>
+      <td>Forbidden</td>
+       <td>The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource, or may need an account of some sort.</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>resource not found</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>410</td>
+      <td>resource deleted</td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
