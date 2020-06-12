@@ -26,4 +26,6 @@ The presence of the Patient pointer gives the consumer an efficiency in that it 
 
 Assuming there is a Patient pointer the consumer will ask the LRL for any Pointers of type xyz for the patient. In this way the consumer performs a scatter gather operation in order to retrieve the full set of Pointers of type xyz for the patient.
 
-This process of retrieving Patient pointers and calling associated LHCRs to gain the full set of Pointers is known as aggregation.
+This process of retrieving Patient pointers and calling associated LHCRs to gain the full set of Pointers is known as aggregation. In order to simplify the process of aggregation each LRL should expose the same query interface. This specification defines that interface. 
+
+{% include note.html content="LRL's and the NRL can both be viewed as RL's and should therefore implement the same query specification. Currently the NRL implements a slight variation of the specification detailed in this guide however it is still compatible with the functionality detailed within these pages such that it could act as a RL in an aggregation workflow."%}

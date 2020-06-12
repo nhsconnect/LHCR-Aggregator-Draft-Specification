@@ -13,7 +13,7 @@ The NHS Aggregator API supports the following operations as detailed in the [Sol
 
 |Interaction|HTTP Verb|Actor|Description|
 | ------------- | ------------- | ------------- | ------------- | ------------- | 
-|[Search](api_interaction_search.html)|GET|Consumer|Parameterised search for pointers on the NRL|
+|[Search](api_interaction_search.html)|GET|Consumer|Parameterised search for pointers on the RL|
 
 ## 2. Prerequisites
 

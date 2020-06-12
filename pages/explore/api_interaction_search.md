@@ -34,7 +34,7 @@ This implementation guide outlines the search parameters for the DocumentReferen
 
 | Name    | Type | Description                                | Consumer System | RLS                                                                  | FHIR Path |
 | ------- | ---- | ------------------------------------------ | --------------- | -------------------------------------------------------------------- | --------- |
-| subject | URI  | Patient who is the subject of the document | MUST include    | MUST implementDocumentReference.subject(verified patient NHS Number) |
+| subject | URI  | Patient who is the subject of the document | MUST include    | MUST implement DocumentReference.subject(verified patient NHS Number) |
 
 The format of the parameters is as follows:
 - subject: https://demographics.spineservices.nhs.uk/STU3/Patient/[NHS Number]
@@ -432,34 +432,6 @@ Last-Modified: Mon, 19 May 2020 08:36:12 GMT
 {% endhighlight %}
 </div>
 
-#### Error Response (OperationOutcome)
-- HTTP 400 - Bad Request: Invalid Parameter
-- OperationOutcome resource that conforms to the [Spine-OperationOutcome-1](https://fhir.nhs.uk/STU3/StructureDefinition/Spine-OperationOutcome-1) profile
-
-<div class="github-sample-wrapper scroll-height-350">
-{% highlight XML %}
-<?xml version="1.0" encoding="UTF-8"?>
-<OperationOutcome xmlns="http://hl7.org/fhir">
-   <id value="5a4171ac-486e-11e8-9ffc-6c3be5a609f5-34326129638901216693" />
-   <meta>
-      <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Spine-OperationOutcome-1" />
-   </meta>
-   <issue>
-      <severity value="error" />
-      <code value="invalid" />
-      <details>
-         <coding>
-            <system value="https://fhir.nhs.uk/STU3/CodeSystem/Spine-ErrorOrWarningCode-1" />
-            <code value="INVALID_PARAMETER" />
-            <display value="Invalid parameter" />
-         </coding>
-      </details>
-      <diagnostics value="The given resource URL does not conform to the expected format - https://demographics.spineservices.nhs.uk/STU3/Patient/[NHS Number]" />
-   </issue>
-</OperationOutcome>
-{% endhighlight %}
-</div>
-
 #### Partial Success Response (searchset Bundle with OperationOutcome)
 - HTTP 200 - Request was successfully executed
 - Bundle resource of type searchset with a total value of 1 containing a DocumentReference resource that conforms to the `NRL-DocumentReference-1` profile
@@ -570,5 +542,41 @@ Last-Modified: Mon, 19 May 2020 08:36:12 GMT
       </search>
    </entry>
 </Bundle>
+{% endhighlight %}
+</div>
+#### Error Response (OperationOutcome)
+- HTTP 400 - Bad Request: Invalid Parameter
+- OperationOutcome resource that conforms to the [Spine-OperationOutcome-1](https://fhir.nhs.uk/STU3/StructureDefinition/Spine-OperationOutcome-1) profile
+
+### Query Response Http Headers
+```
+HTTP/1.1 400 Bad Request
+Server: nginx/1.10.0 (Ubuntu)
+Date: Mon, 19 May 2020 08:36:12 GMT
+Content-Type: application/fhir+xml;charset=utf-8
+Last-Modified: Mon, 19 May 2020 08:36:12 GMT
+```
+
+<div class="github-sample-wrapper scroll-height-350">
+{% highlight XML %}
+<?xml version="1.0" encoding="UTF-8"?>
+<OperationOutcome xmlns="http://hl7.org/fhir">
+   <id value="5a4171ac-486e-11e8-9ffc-6c3be5a609f5-34326129638901216693" />
+   <meta>
+      <profile value="https://fhir.nhs.uk/STU3/StructureDefinition/Spine-OperationOutcome-1" />
+   </meta>
+   <issue>
+      <severity value="error" />
+      <code value="invalid" />
+      <details>
+         <coding>
+            <system value="https://fhir.nhs.uk/STU3/CodeSystem/Spine-ErrorOrWarningCode-1" />
+            <code value="INVALID_PARAMETER" />
+            <display value="Invalid parameter" />
+         </coding>
+      </details>
+      <diagnostics value="The given resource URL does not conform to the expected format - https://demographics.spineservices.nhs.uk/STU3/Patient/[NHS Number]" />
+   </issue>
+</OperationOutcome>
 {% endhighlight %}
 </div>

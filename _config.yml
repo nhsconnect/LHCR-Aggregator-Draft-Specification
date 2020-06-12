@@ -113,3 +113,5 @@ plugins:
    - jekyll-sitemap
    - jekyll-feed
    - jekyll-gist
+
+exclude: [vendor]
