@@ -29,4 +29,6 @@ A Consumer can perform parameterised searches of the Pointers held within the RL
 
 ### Data-flow
 
+<img alt="Consumer queries RL to get Pointer(s)" src="images/solution/Solution_Interactions_diagram.png" style="width:75%;max-width: 75%;">
+
 The consumer client initiates a request with the Aggregator service to find pointers for a given patient. The pointers may be of a given type. The Aggregator assembles all relevant pointers based on the Consumer client’s inbound request from the NRL and LRLs and returns the aggregated results with any relevant errors, if any. 
