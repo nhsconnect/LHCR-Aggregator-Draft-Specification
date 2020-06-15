@@ -1,0 +1,41 @@
+<p>The 'delete' interaction removes an existing resource. The interaction is performed by an HTTP DELETE of the <code class="highlighter-rouge">{{include.resource}}</code> resource.</p>
+
+<!--<p>Return a single <code class="highlighter-rouge">{{include.resource}}</code> for the specified id{{include.content}}.</p>-->
+
+<p>All requests MUST contain a valid <code class="highlighter-rouge">Authorization</code> header and MUST contain an <code class="highlighter-rouge">Accept</code> header and MUST contain an <code class="highlighter-rouge">If-Match</code> header. The <code class="highlighter-rouge">Accept</code> header indicates the format of the response the client is able to understand, this will be one of the following <code class="highlighter-rouge">application/fhir+json</code> or <code class="highlighter-rouge">application/fhir+xml</code>. The ‘If-Match’ header makes the request conditional. The server will process the requested DocumentReference only if its versionId property matches one of the listed ETags.</p>
+
+<h3 id="readresponse">1.1. Response</h3>
+
+Assuming successful URL submission, there are two possible outcomes to the delete request:
+
+<p>A full set of response codes can be found here <a href="profiles_api_codes.html">API Response Codes</a>. FHIR Servers MUST support the following response codes:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>204</td>
+      <td>No Content</td>
+       <td>The record either does not exist or has been successfully deleted.</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>Forbidden</td>
+       <td>The request was valid, but the server is refusing action. The user might not have the necessary permissions for a resource, or may need an account of some sort.</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>No match to delete</td>
+       <td>The parameters used to identify the record were not met.</td>
+    </tr>
+    <tr>
+      <td>409</td>
+      <td>Conflict</td>
+       <td>Indicates that the request could not be processed because of conflict in the request, such as an edit or versionId conflict between multiple simultaneous updates.</td>
+    </tr>
+     <tr>
+      <td>412</td>
+      <td>Precondition Failed</td>
+       <td>The server does not meet one of the preconditions that the requester put on the request.</td>
+    </tr>
+  </tbody>
+</table>

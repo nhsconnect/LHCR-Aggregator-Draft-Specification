@@ -6,5 +6,4 @@ permalink: tag_support.html
 sidebar: overview_sidebar
 folder: tags
 ---
-{% include taglogic.html %}
-
+{% include tag_redirect.html %}

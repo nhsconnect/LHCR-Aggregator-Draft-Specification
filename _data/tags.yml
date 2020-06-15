@@ -1,24 +1,17 @@
 allowed-tags:
-  - getting_started
-  - news
-  - first_of_type
-  - usecase
-  - fhir
-  - structured
-  - foundations
-  - htmlgetcarerecord
-  - getcarerecord
-  - appointments
-  - tasks
-  - engagement
-  - design  
-  - development
-  - integration  
-  - testing
-  - assurance
-  - deployment
   - support
-  - commissioning
-  - clinical_safety
-  - information_governance
-  - code_snippet
+  - overview
+  - development
+  # - assurance
+  # - authorisation
+  # - authentication
+  # - auditing
+  - pointers
+  # - security
+  - fhir
+  # - testing
+  # - for_providers
+  # - for_consumers
+  # - record_retrieval
+  # - spine_secure_proxy
+  # - integration
