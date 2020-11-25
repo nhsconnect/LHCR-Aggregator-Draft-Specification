@@ -4,11 +4,11 @@ keywords: development versioning
 tags: [overview]
 sidebar: overview_sidebar
 permalink: overview_release_notes.html
-summary: Summary release notes of the versions released in RL API
+summary: Documentation release notes.
 ---
 
-## 1.0.0-experimental
+## 0.1.1-alpha
+Review of initial draft.
 
-First draft of RL API (Version 1.0 Draft A).
-
-<!-- Published on [NHS Developer Network](https://data.developer.nhs.uk/fhir/nrls-v1-draft-a/Chapter.1.About/index.html). -->
+## 0.1.0-alpha
+Initial draft.

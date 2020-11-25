@@ -3,15 +3,15 @@ title: Glossary
 keywords: abbreviations definitions glossaries terms
 tags: [overview]
 sidebar: overview_sidebar
-permalink: overview_glossary.html
-summary: "Glossary of terms used this implementation guide"
+permalink: support_glossary.html
+summary: "Glossary of terms used this implementation guide."
 toc: false
 ---
 
 Glossary of common terms and abbreviations used throughout this documentation site.
 
 ## .NET
-.NET is both a business strategy from Microsoft and its collection of programming support for Web services. Microsoft’s goal is to provide individual and business users with a seamlessly interoperable and Web-enabled interface for applications and computing devices and to make computing activities increasingly Web browser-oriented. The .NET platform includes servers; building-block services, such as Web-based data storage; and device software. It also includes Passport, Microsoft’s fill-in-the-form-only-once identity verification service.
+.NET is both a business strategy from Microsoft and its collection of programming support for Web services. Microsoft's goal is to provide individual and business users with a seamlessly interoperable and Web-enabled interface for applications and computing devices and to make computing activities increasingly Web browser-oriented. The .NET platform includes servers; building-block services, such as Web-based data storage; and device software. It also includes Passport, Microsoft's fill-in-the-form-only-once identity verification service.
 
 ## API
 The term Application Programming Interface is quite a confused term in the context of FHIR. Strictly speaking, an API is a set or services offered by a programming library that can be made use of by another application. Historically these would have been made available from a single machine although now they are available across networks.
@@ -37,7 +37,7 @@ Draft Standard for Trial Use
 End User Organisation Declaration
 
 ## FHIR
-FHIR is the latest standard to be developed under the HL7 organisation. Pronounced ‘Fire’ and stands for Fast Healthcare Interoperability Resources.
+FHIR is the latest standard to be developed under the HL7 organisation. Pronounced 'Fire' and stands for Fast Healthcare Interoperability Resources.
 
 ## FHIRPath
 FHIRPath is a path-based navigation and extraction language, somewhat like XPath. Operations are expressed in terms of the logical content of hierarchical data models, supporting traversal, selection, and filtering of data.
@@ -70,10 +70,10 @@ National Events Management Service, a sister project to the NRL that tracks even
 The National Record Locator is a national index to identify available records for patients and locate them across local and national care record solutions (such as SCR).
 
 ## ODS
-The Organisational Data Service is responsible for publishing organisation and practitioner codes, along with related national policies and standards. They’re also responsible for the ongoing maintenance of the organisation and person nodes of the Spine Directory Service, the central data repository used within various NHS systems and services.
+The Organisational Data Service is responsible for publishing organisation and practitioner codes, along with related national policies and standards. They're also responsible for the ongoing maintenance of the organisation and person nodes of the Spine Directory Service, the central data repository used within various NHS systems and services.
 
 ## PAS
-The Patient Administration System records the patient’s demographics (e.g. name, home address, date of birth) and details all patient contact with the hospital, both outpatient and inpatient.
+The Patient Administration System records the patient's demographics (e.g. name, home address, date of birth) and details all patient contact with the hospital, both outpatient and inpatient.
 
 Some PAS systems do support additional clinical behaviours.
 
@@ -90,10 +90,10 @@ A grouping that contains one or more Record Types.
 The clinical type of a record as defined by SNOMED-CT code. The clinical types permitted on the NRL are defined by a controlled list.
 
 ## REST
-Representational State Transfer is a protocol based upon a network of Web resources (a virtual state-machine) where the user progresses through the application by selecting links, such as /user/tom, and operations such as GET or DELETE (state transitions), resulting in the next resource (representing the next state of the application) being transferred to the user for their use. Typically preferred due to it being “stateless” so no information about the client session needs to be maintained on the server.
+Representational State Transfer is a protocol based upon a network of Web resources (a virtual state-machine) where the user progresses through the application by selecting links, such as /user/tom, and operations such as GET or DELETE (state transitions), resulting in the next resource (representing the next state of the application) being transferred to the user for their use. Typically preferred due to it being "stateless" so no information about the client session needs to be maintained on the server.
 
 ## RESTful
-Interfaces are often referred to as being “RESTful” when they follow principles of REST to avoid debate about whether they fully conform to REST.
+Interfaces are often referred to as being "RESTful" when they follow principles of REST to avoid debate about whether they fully conform to REST.
 
 ## SCAL
 Supplier Conformance Assessment List
@@ -144,7 +144,7 @@ A list of actions or event steps, typically defining the interactions between a 
 A visual presentation of a Use Case, standardised within UML.
 
 ## X509 certificate
-A format of public key certificate originally defined in RFC 5280. Often colloquially referred to as an “SSL certificate”.
+A format of public key certificate originally defined in RFC 5280. Often colloquially referred to as an "SSL certificate".
 
 ## XML
 eXtensible Markup Language is a protocol designed to store and transport data. XML was designed to be both human and machine readable.
